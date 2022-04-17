@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Picture Puzzle</title>
+  <link rel="stylesheet" href="./style.css">
+  <script  src="script.js"></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js'></script>
+<script src='https://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js'></script>
+<script src='https://code.jquery.com/ui/1.8.23/jquery-ui.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js'></script>
+
+
+</head>
+<body>
+<div style=" margin: 0 auto;" id="puzzleWrapper">
+    <header>
+        <div class="headerTitle">Picture Puzzle</div>
+    </header>
+ <main style="width: 50%; margin: 0 auto;">
+        <button id="start">Click to start</button>
+        <button id="changeimg" onclick="myFunction()">Change Image</button>
+        <button>Timer:  <content id="countdown">5:00</content></button>
+        
+        </main>
+<section>
+   
+    <div  style="width: 100%; margin-left: 110px;" class="contentWrapper">
+        <div class="puzzleSection">
+        <div id="image"></div>
+        
+        </div>
+    
+        <div style="margin-top: 29px; margin-inline:150px;" class="previewSection">
+
+        <div id="image"></div>
+        <div class="previewTitle">Solved Puzzle</div>
+        </div>
+        </div>
+    </section>
+<section id="endgame" >
+            <script>function reloadfunction() {
+                location.reload();
+            }
+            </script>
+            <button onclick="reloadfunction()" style="background: orange; color: white; font-weight: bold; opacity: 100%; width: 25%; margin: 0 auto;"> End Game</button>
+    </section>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+<section style="display: none;" id="myDIV">
+    <div class="imgChoice">
+    <div class="selectTitle">Click on any image below</div>
+    <div class="imgSelectionWrapper">
+    <div class="img1"></div>
+    <div class="img2"></div>
+    <div class="img3"></div>
+    <div class="img4"></div>
+    <div class="img5"></div>
+    <div class="img6"></div>
+    <div class="img7"></div>
+    <div class="img8"></div>
+
+</div>
+</div>
+</section>
+
+    <section>
+    <div class="lbWrapper">
+    <div class="failWrapper">
+    <div class="failTilte">Sorry !!! Better luck next time</div>
+    <div class="tryAgain"><a href="#">click here to try once more.</a></div>
+    </div>
+    <div class="successWrapper">
+    <div class="successTilte">PUZZLE COMPLETED</div>
+    <div class="successMsg"></div>
+    <div class="tryAgain"><a href="#">Want to try again? Click on me</a></div>
+    </div>
+    </div>
+    </section>
+
+<section>
+<div class="lbWrapper1">
+<div class="signupWrapper">
+<div class="signUpTitle">Please Enter a Name to begin</div>
+<div class="mlistWrapper">
+<input style="width: 90%; height: 30px; border-radius: 20px;" id="email" name="email" type="name" placeholder="Name" class="email">
+<button style="margin-left: 29px;" class="submit" type="submit">Start Game</button>
+</div>
+<div class="error">Please enter a name</div>
+</div>
+
+</div>
+</section>
+
+</div>
+
+
+</body>
+</html>
