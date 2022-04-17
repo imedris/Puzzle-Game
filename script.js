@@ -1,6 +1,6 @@
-$("#endgame").hide();
 $(document).ready(function () {
     imageSelect();
+    $("#endgame").hide();
     $("#start").on("click", function () {
         entryName();
     });
